@@ -37,7 +37,7 @@ public class MessageController {
 
     @MessageMapping("/colaborate ")
     @SendTo("/topic/response")
-    public Content join (@Payload Colaborate colaborate, SimpMessageHeaderAccessor accessor){
+    public Content colaborate (@Payload Colaborate colaborate, SimpMessageHeaderAccessor accessor){
         CONTENT.setContent(colaborate.getContent());
         return CONTENT;
     }
